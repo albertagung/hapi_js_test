@@ -16,16 +16,21 @@
 
 ## API endpoints
 
+ - Create new movie: `POST /movies/g/create` with JSON body:
+	 - `title (STRING): <NEW_MOVIE_TITLE>`
+	 - `author (STRING): <NEW_MOVIE_AUTHOR>`
+	 - `is_released (BOOLEAN): <TRUE / FALSE>`
+	 - `production_year (STRING): <NEW_MOVIE_PRODUCTION_YEAR>`
  - Get all movies: `GET /movies/l/list?search=<QUERY>&limit=<NUMBER>&offset=<NUMBER>`
 	 - `?search=<QUERY>` --> to search the movie by title / author, default is null
 	 - `?limit=<NUMBER>` --> to limit the dataset by number, default is null
 	 - `?offset=<NUMBER>` --> to identify the starting point to return rows from a result dataset, default is null
  - Get movie by ID: `GET /movies/g/:<MOVIE_ID>`
- -  Update movie by ID: `PATCH /movies/g/:<MOVIE_ID>` with JSON body:
-	 - `title: <UPDATE_MOVIE_TITLE>`
-	 - `author: <UPDATED_MOVIE_AUTHOR>`
-	 - `is_released: <UPDATED_MOVIE_RELEASE_DATE>`
-	 - `production_year: <UPDATED_MOVIE_PRODUCTION_YEAR>`
+ - Update movie by ID: `PATCH /movies/g/:<MOVIE_ID>` with JSON body:
+	 - `title (STRING): <UPDATE_MOVIE_TITLE>`
+	 - `author (STRING): <UPDATED_MOVIE_AUTHOR>`
+	 - `is_released (BOOLEAN): <UPDATED_MOVIE_RELEASE_DATE>`
+	 - `production_year (STRING): <UPDATED_MOVIE_PRODUCTION_YEAR>`
  - Delete movie by ID: `DELETE /movies/g/:<MOVIE_ID>`
 
  
